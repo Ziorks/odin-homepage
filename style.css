@@ -3,3 +3,11 @@
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-family: "Quattrocento", serif;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+}
