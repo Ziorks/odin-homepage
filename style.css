@@ -1,13 +1,184 @@
+:root {
+  --accent-color: rgb(0, 147, 192);
+  --secondary-font-color: rgb(105, 105, 105);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Quattrocento", serif;
 }
 
-h2 {
+p {
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: relative;
+  height: 1100px;
+  overflow: hidden;
+}
+
+.headerDecoration {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  background-color: var(--accent-color);
+  transform-origin: bottom left;
+  transform: translateY(-100px) rotate(-35deg);
+  box-shadow: 0px -25px 100px black;
+}
+
+.headerImageContainer {
+  position: relative;
+  text-align: left;
+  width: 640px;
+  margin: 64px auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.headerImageContainer > img {
+  display: block;
+  width: 100%;
+}
+
+.headerImageContainer > h1 {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 32px;
+  color: white;
+  font-size: 10rem;
+  text-shadow: 0 10px 25px black;
+}
+
+.aboutMe,
+.myWork {
+  text-align: center;
+  padding: 48px;
+}
+
+.aboutMe > h2,
+.myWork > h2 {
+  font-size: 6rem;
+}
+
+.aboutMe > p {
+  margin: 24px 0;
+  color: var(--secondary-font-color);
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.aboutMe > div {
+  font-size: 4rem;
+}
+
+.aboutMe > div * {
+  margin: 0 12px;
+}
+
+.myWork {
+  margin: 128px 0;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 128px;
+  margin: 64px 0;
+}
+
+.projectCard {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 675px;
+}
+
+.projectImage {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 8rem;
+  background-color: rgb(128, 108, 201);
+}
+
+.projectTitle {
+  display: flex;
+  padding: 32px 64px;
+}
+
+.projectTitle > h3 {
+  flex: 1;
+  font-size: 3.5rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+.projectLinks {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  font-size: 3rem;
+}
+
+.projectLinks > img {
+  width: 50px;
+}
+
+.projectDescription {
+  height: 300px;
+  font-size: 2.2rem;
+  color: var(--secondary-font-color);
+  text-align: left;
+  padding: 0 32px;
+}
+
+footer {
+  background-color: var(--accent-color);
+}
+
+.footerInfoContainer {
+  padding: 36px;
+}
+
+.footerInfoContainer > div {
+  margin-bottom: 64px;
+}
+
+.footerInfoContainer > h2 {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 5.5rem;
+  color: white;
+}
+
+.footerInfoContainer p {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.footerInfoContainer > div:first-of-type > p {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.footerInfoContainer > div:last-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 6rem;
+}
+
+footer > img {
+  display: block;
+  margin-top: 64px;
+  width: 100%;
 }
