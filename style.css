@@ -1,6 +1,6 @@
 :root {
-  --accent-color: rgb(0, 147, 192);
-  --secondary-font-color: rgb(105, 105, 105);
+  --accent-color: #0891b2;
+  --secondary-font-color: #565656;
 }
 
 * {
@@ -20,31 +20,32 @@ p {
 
 header {
   position: relative;
-  height: 550px;
   overflow: hidden;
 }
 
 .headerDecoration {
   position: absolute;
-  height: 100%;
+  top: 0;
+  height: 1000px;
   width: 200%;
   background-color: var(--accent-color);
   transform-origin: bottom left;
-  transform: translateY(-100px) rotate(-25deg);
-  box-shadow: 0px -25px 100px black;
+  transform: translateY(-500px) rotate(-25deg);
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 .headerImageContainer {
   position: relative;
   text-align: left;
   width: 320px;
-  margin: 32px auto;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  margin: 64px auto;
 }
 
 .headerImageContainer > img {
   display: block;
   width: 100%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .headerImageContainer > h1 {
@@ -54,32 +55,32 @@ header {
   left: 32px;
   color: white;
   font-size: 5rem;
-  text-shadow: 0 10px 25px black;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.aboutMe,
+.aboutMeText,
 .myWork {
   text-align: center;
   padding: 24px;
 }
 
-.aboutMe > h2,
+.aboutMeText > h2,
 .myWork > h2 {
   font-size: 3rem;
 }
 
-.aboutMe > p {
-  margin: 24px 0;
+.aboutMeText > p {
+  margin: 16px 0;
   color: var(--secondary-font-color);
   font-size: 1.4rem;
   text-align: left;
 }
 
-.aboutMe > div {
+.aboutMeText > div {
   font-size: 2.5rem;
 }
 
-.aboutMe > div * {
+.aboutMeLinks * {
   margin: 0 12px;
 }
 
@@ -96,16 +97,18 @@ header {
 }
 
 .projectCard {
+  flex: 1;
+  max-width: 375px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  max-width: 320px;
 }
 
 .projectImage {
   height: 260px;
-  padding: 16px;
+  padding: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: white;
   font-size: 3.5rem;
 }
@@ -170,7 +173,7 @@ footer {
 }
 
 .footerInfoContainer > div {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .footerInfoContainer > h2 {
@@ -186,6 +189,22 @@ footer {
   color: white;
 }
 
+.footerPhone,
+.footerEmail {
+  display: flex;
+}
+
+.footerPhone {
+  margin-bottom: 8px;
+}
+
+.footerInfoContainer img {
+  display: none;
+  color: white;
+  width: 25px;
+  margin-right: 16px;
+}
+
 .footerInfoContainer > div:first-of-type > p {
   font-size: 1.3rem;
   text-align: left;
@@ -193,7 +212,8 @@ footer {
 
 .footerInfoContainer > div:last-of-type {
   display: flex;
-  justify-content: space-evenly;
+  gap: 48px;
+  justify-content: center;
   font-size: 3rem;
 }
 
@@ -201,4 +221,136 @@ footer > img {
   display: block;
   margin-top: 32px;
   width: 100%;
+}
+
+@media (min-width: 800px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px;
+  }
+
+  .footerInfoContainer {
+    margin: auto 0;
+  }
+
+  .footerInfoContainer > h2 {
+    text-align: left;
+  }
+
+  .footerInfoContainer img {
+    display: inline;
+  }
+
+  .footerInfoContainer > div:last-of-type {
+    display: flex;
+    justify-content: flex-start;
+    gap: 36px;
+    font-size: 3rem;
+  }
+
+  footer > img {
+    max-width: 320px;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .headerDecoration {
+    transform: translateY(-400px) rotate(-12deg);
+  }
+
+  .aboutMe {
+    margin: 192px 128px 32px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .headerImageContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    margin: unset;
+    padding: 64px;
+  }
+
+  .headerImageContainer > img {
+    width: 320px;
+  }
+
+  .headerImageContainer > h1 {
+    width: max-content;
+    bottom: unset;
+    left: unset;
+    top: 96px;
+    right: 64px;
+  }
+
+  .floater {
+    float: left;
+    width: 250px;
+    height: 330px;
+  }
+
+  .aboutMeText > h2 {
+    margin-top: 96px;
+  }
+
+  .aboutMeText > p {
+    margin-bottom: 96px;
+  }
+
+  .aboutMeLinks {
+    display: none;
+  }
+}
+
+@media (min-width: 1250px) {
+  .headerDecoration {
+    transform: rotate(-10deg);
+  }
+
+  .aboutMe {
+    margin: 64px 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
+    box-shadow: unset;
+  }
+
+  .aboutMeText {
+    max-width: 900px;
+    margin: 0;
+    text-align: left;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .headerImageContainer {
+    flex-shrink: 0;
+    position: relative;
+    padding: 0;
+    width: 600px;
+  }
+
+  .headerImageContainer > img {
+    width: 100%;
+  }
+
+  .headerImageContainer > h1 {
+    top: unset;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .floater {
+    display: none;
+  }
+
+  .aboutMeLinks {
+    display: block;
+    text-align: right;
+  }
 }
