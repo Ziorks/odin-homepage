@@ -108,7 +108,26 @@ header {
   align-items: center;
   color: white;
   font-size: 3.5rem;
-  background-color: rgb(128, 108, 201);
+}
+
+.projectImage.purple {
+  background-color: #7c75ca;
+}
+
+.projectImage.orange {
+  background-color: #d88f39;
+}
+
+.projectImage.green {
+  background-color: #5e8f4d;
+}
+
+.projectImage.pink {
+  background-color: #ca7599;
+}
+
+.projectImage.blue {
+  background-color: #4692d9;
 }
 
 .projectTitle {
