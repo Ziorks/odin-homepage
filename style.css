@@ -20,7 +20,7 @@ p {
 
 header {
   position: relative;
-  height: 1100px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -30,15 +30,15 @@ header {
   width: 200%;
   background-color: var(--accent-color);
   transform-origin: bottom left;
-  transform: translateY(-100px) rotate(-35deg);
+  transform: translateY(-100px) rotate(-25deg);
   box-shadow: 0px -25px 100px black;
 }
 
 .headerImageContainer {
   position: relative;
   text-align: left;
-  width: 640px;
-  margin: 64px auto;
+  width: 320px;
+  margin: 32px auto;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -53,30 +53,30 @@ header {
   bottom: 0px;
   left: 32px;
   color: white;
-  font-size: 10rem;
+  font-size: 5rem;
   text-shadow: 0 10px 25px black;
 }
 
 .aboutMe,
 .myWork {
   text-align: center;
-  padding: 48px;
+  padding: 24px;
 }
 
 .aboutMe > h2,
 .myWork > h2 {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 .aboutMe > p {
   margin: 24px 0;
   color: var(--secondary-font-color);
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 
 .aboutMe > div {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .aboutMe > div * {
@@ -91,33 +91,34 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 128px;
-  margin: 64px 0;
+  gap: 64px;
+  margin: 32px 0;
 }
 
 .projectCard {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  max-width: 675px;
+  max-width: 320px;
 }
 
 .projectImage {
-  height: 550px;
+  height: 260px;
+  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 8rem;
+  font-size: 3.5rem;
   background-color: rgb(128, 108, 201);
 }
 
 .projectTitle {
   display: flex;
-  padding: 32px 64px;
+  padding: 16px 32px;
 }
 
 .projectTitle > h3 {
   flex: 1;
-  font-size: 3.5rem;
+  font-size: 1.7rem;
   text-align: left;
   font-weight: normal;
 }
@@ -125,17 +126,17 @@ header {
 .projectLinks {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
-  font-size: 3rem;
+  gap: 16px;
+  font-size: 1.5rem;
 }
 
 .projectLinks > img {
-  width: 50px;
+  width: 25px;
 }
 
 .projectDescription {
-  height: 300px;
-  font-size: 2.2rem;
+  height: 125px;
+  font-size: 1rem;
   color: var(--secondary-font-color);
   text-align: left;
   padding: 0 32px;
@@ -146,39 +147,39 @@ footer {
 }
 
 .footerInfoContainer {
-  padding: 36px;
+  padding: 24px;
 }
 
 .footerInfoContainer > div {
-  margin-bottom: 64px;
+  margin-bottom: 36px;
 }
 
 .footerInfoContainer > h2 {
   margin-bottom: 16px;
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 3rem;
   color: white;
 }
 
 .footerInfoContainer p {
-  font-size: 1.8rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  line-height: 1.4;
   color: white;
 }
 
 .footerInfoContainer > div:first-of-type > p {
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   text-align: left;
 }
 
 .footerInfoContainer > div:last-of-type {
   display: flex;
   justify-content: space-evenly;
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 footer > img {
   display: block;
-  margin-top: 64px;
+  margin-top: 32px;
   width: 100%;
 }
