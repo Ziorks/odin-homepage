@@ -21,7 +21,15 @@
         <div class="headerDecoration"></div>
         <section class="aboutMe">
           <div class="headerImageContainer">
-            <img src="./images/guyOnLaptop-cropped-320w.jpg" alt="" />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="./images/guyOnLaptop-cropped-320w.jpg" />
+              <source
+                media="(max-width: 1399px)"
+                srcset="./images/guyOnLaptop-400w.jpg" />
+              <img src="./images/guyOnLaptop-600w.jpg" alt="" />
+            </picture>
             <h1>Chad Jimbles</h1>
           </div>
           <div class="aboutMeText">
