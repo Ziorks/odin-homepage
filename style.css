@@ -97,7 +97,8 @@ header {
 }
 
 .projectCard {
-  max-width: 350px;
+  flex-shrink: 0;
+  width: 350px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -165,24 +166,31 @@ header {
 
 footer {
   background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
 }
 
-.footerInfoContainer {
+.footerContainer {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.footerInfo {
   padding: 24px;
 }
 
-.footerInfoContainer > div {
+.footerInfo > div {
   margin-bottom: 32px;
 }
 
-.footerInfoContainer > h2 {
+.footerInfo > h2 {
   margin-bottom: 16px;
   text-align: center;
   font-size: 3rem;
   color: white;
 }
 
-.footerInfoContainer p {
+.footerInfo p {
   font-size: 1.2rem;
   line-height: 1.4;
   color: white;
@@ -197,61 +205,33 @@ footer {
   margin-bottom: 8px;
 }
 
-.footerInfoContainer img {
+.footerInfo img {
   display: none;
   color: white;
   width: 25px;
   margin-right: 16px;
 }
 
-.footerInfoContainer > div:first-of-type > p {
+.footerInfo > div:first-of-type > p {
   font-size: 1.3rem;
   text-align: left;
 }
 
-.footerInfoContainer > div:last-of-type {
+.footerInfo > div:last-of-type {
   display: flex;
   gap: 48px;
   justify-content: center;
   font-size: 3rem;
 }
 
-footer > img {
+.footerImage {
   display: block;
   margin-top: 32px;
-  width: 100%;
 }
 
-@media (min-width: 800px) {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 36px;
-  }
-
-  .footerInfoContainer {
-    margin: auto 0;
-  }
-
-  .footerInfoContainer > h2 {
-    text-align: left;
-  }
-
-  .footerInfoContainer img {
-    display: inline;
-  }
-
-  .footerInfoContainer > div:last-of-type {
-    display: flex;
-    justify-content: flex-start;
-    gap: 36px;
-    font-size: 3rem;
-  }
-
-  footer > img {
-    max-width: 320px;
-    margin: auto 0;
-  }
+.footerImage img {
+  display: block;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -307,6 +287,44 @@ footer > img {
 
   .projectsContainer {
     justify-content: space-evenly;
+  }
+
+  .footerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px;
+  }
+
+  .footerInfo > h2 {
+    text-align: left;
+  }
+
+  .footerInfo img {
+    display: inline;
+  }
+
+  .footerInfo > div:last-of-type {
+    display: flex;
+    justify-content: flex-start;
+    gap: 36px;
+    font-size: 3rem;
+  }
+
+  .footerImage {
+    flex: 0;
+  }
+
+  .footerImage img {
+    width: unset;
+  }
+}
+
+@media (min-width: 1300px) {
+  .footerContainer {
+    align-items: unset;
   }
 }
 
