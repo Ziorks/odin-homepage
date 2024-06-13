@@ -97,8 +97,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 64px;
-  margin: 64px;
+  gap: 32px;
+  margin: 64px 32px;
 }
 
 .projectCard {
