@@ -23,6 +23,11 @@ header {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .headerDecoration {
   position: absolute;
   top: 0;
@@ -152,7 +157,7 @@ header {
   font-size: 1.5rem;
 }
 
-.projectLinks > img {
+.projectLinks img {
   width: 25px;
 }
 
