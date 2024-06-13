@@ -58,8 +58,7 @@ header {
   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.aboutMeText,
-.myWork {
+.aboutMeText {
   text-align: center;
   padding: 24px;
 }
@@ -85,7 +84,9 @@ header {
 }
 
 .myWork {
-  margin: 128px 0;
+  margin: 128px auto;
+  max-width: 1500px;
+  text-align: center;
 }
 
 .projectsContainer {
@@ -93,12 +94,11 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 64px;
-  margin: 32px 0;
+  margin: 64px;
 }
 
 .projectCard {
-  flex: 1;
-  max-width: 375px;
+  max-width: 350px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -255,7 +255,7 @@ footer > img {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 780px) {
   .headerDecoration {
     transform: translateY(-400px) rotate(-12deg);
   }
@@ -303,6 +303,15 @@ footer > img {
 
   .aboutMeLinks {
     display: none;
+  }
+
+  .myWork > h2 {
+    text-align: left;
+    margin-left: 128px;
+  }
+
+  .projectsContainer {
+    justify-content: space-evenly;
   }
 }
 
